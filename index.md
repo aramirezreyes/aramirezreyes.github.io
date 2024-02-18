@@ -34,7 +34,7 @@ I am interested in tropical cyclones (and other hydro-meteorological phenomena),
 \shortcv{
   interests=["Fluid Dynamics", "Tropical cyclones", "Free software", "Supercomputing", "Climate"],
   education=[
-    ("PhD in Atmospheric Science, in progress.", "University of California, Davis"),
+    ("PhD in Atmospheric Science, 2023", "University of California, Davis"),
     ("Masters in Scientific Computing, 2017", "Université de Lille 1, Sciences et Technologies"),
     ("BSc in Physics, 2016", "Universidad Nacional Autónoma de México")]
 }
