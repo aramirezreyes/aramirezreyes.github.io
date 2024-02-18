@@ -1,4 +1,4 @@
-Sitemap: https://www.argelramirezreyes.com/sitemap.xml
+Sitemap: https://aramirezreyes.github.io/sitemap.xml
 
 User-agent: *
 Disallow:
