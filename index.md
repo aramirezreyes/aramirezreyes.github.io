@@ -15,7 +15,7 @@
   job="Tropical cyclone modeler",
   resume="/assets/ARR_resume.pdf",
   email="argel.ramirez@gmail.com",
-  twitter="https://twitter.com/aramirezreyes",
+  twitter="https://www.threads.net/@hurakandinsky",
   gscholar="https://scholar.google.com/citations?user=JkcQycYAAAAJ&hl=es",
   github="https://github.com/aramirezreyes",
   linkedin="https://www.linkedin.com/in/argelramirezreyes/"
