@@ -27,6 +27,7 @@ Esta discusión sobre la adición de una nueva categoría es más bien una discu
 [^1]: Formalmente, sólo usamos el término huracán para los ciclones tropicales más intensos. Por practicidad, aquí uso el término huracán para todos los ciclones tropicales.
 
 Referencias:
+
 [1] Wehner, M. F., & Kossin, J. P. (2024). The growing inadequacy of an open-ended Saffir–Simpson hurricane wind scale in a warming world. Proceedings of the National Academy of Sciences, 121(7), e2308901121. [https://doi.org/10.1073/pnas.2308901121](https://doi.org/10.1073/pnas.2308901121)
 
 [2] Mann, M. E. (2024). Cat 6 hurricanes have arrived. Proceedings of the National Academy of Sciences, 121(7), e2322597121. [https://doi.org/10.1073/pnas.2322597121](https://doi.org/10.1073/pnas.2322597121)
