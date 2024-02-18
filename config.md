@@ -21,7 +21,7 @@ dateformat = "year"
 # RSS setup
 website_title = "Hurricanes, open science and julia language!"
 website_descr = "Personal website of Argel Ramíirez Reyes"
-website_url   = "https://www.argelramirezreyes.com/"
+website_url   = "https://aramirezreyes.github.io/"
 +++
 
 \newcommand{\callout}[1]{~~~<div class="alert alert-note"><div>~~~#1~~~</div></div>~~~}
