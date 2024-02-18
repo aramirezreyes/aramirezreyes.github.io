@@ -12,9 +12,7 @@
 \img{"/assets/img/perfil_sq.jpeg", class="avatar avatar-square", alt="Argel Ramírez Reyes"}
 \portrait{
   name="Argel Ramírez Reyes",
-  job="PhD Candidate in Atmospheric Science",
-  link="https://www.ucdavis.edu/",
-  linkname="University of California, Davis",
+  job="Tropical cyclone modeler",
   resume="/assets/ARR_resume.pdf",
   email="argel.ramirez@gmail.com",
   twitter="https://twitter.com/aramirezreyes",
@@ -29,7 +27,7 @@
 @@col-12,col-lg-8
 
 \begin{biography}{}
- I’m a PhD Candidate in the Atmospheric Sciences program at UC Davis, at [Dr Da Yang’s Climate group](https://www.yang-climate-group.org/). Among other things I am interested in tropical cyclones (my current research focus), supercomputing, open science and open software. I am working towards understanding the essential elements in the genesis of tropical cyclones. My PhD Studies are mainly funded by the People of México through a CONACYT – UCMexus fellowship.
+I am interested in tropical cyclones (and other hydro-meteorological phenomena), supercomputing, open science and open software. I am interested in the processes that create tropical cyclones, how they are changing with climate, and how they interact with society to create risk.
  
 \end{biography}
 
