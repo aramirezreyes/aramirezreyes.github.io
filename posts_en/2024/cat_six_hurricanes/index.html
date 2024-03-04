@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Argel Ramírez Reyes">
+  <meta name="description" content="Atmospheric scientist and modeler. Supercomputing enthusiast.">
+
+  <meta name="theme-color" content="#2962ff">
+  <link rel="icon" href="/assets/cloud-wind.ico">
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+  <link rel="stylesheet" href="/css/academicons.min.css"/>
+  <link rel="stylesheet" href="/css/mytweaks_to_academic.css"/>
+
+   <title>Is a sixth category for hurricanes necessary?</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">Argel Ramírez Reyes</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">Argel Ramírez Reyes</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <!-- <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li> -->
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog ES</span></a></li>
+	<li class=nav-item><a class=nav-link href="/posts_en/"><span>Blog EN</span></a></li>
+        <!-- <\!-- <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li> -\-> -->
+        <!-- <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>Is a sixth category for hurricanes necessary?</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p>Appeared in <a href="https://planeteando.org/2024/02/19/es-necesaria-una-categoria-6-para-huracanes/">Planeteando &#40;spanish&#41;</a></p>
+<p>Last week, two pieces were published in the National Academy of Sciences of the United States journal, introducing the idea of adding a Category 6 to the Saffir-Simpson hurricane intensity scale<sup id="fnref:1"><a href="#fndef:1" class="fnref">[1]</a></sup>. The titles of the two articles are attention-grabbing and alarming &#40;&quot;The growing inadequacy of an open scale of hurricane winds in a warming world,&quot; a peer-reviewed research paper by Wehner and Kossin &#91;1&#93;, and &quot;Category 6 hurricanes are already here,&quot; an opinion piece by Dr. Michael E. Mann &#91;2&#93;&#41;, leading to widespread coverage by various media outlets around the world &#40;e.g., <a href="https://aristeguinoticias.com/0602/kiosko/huracanes-cientificos-plantean-crear-categoria-6-por-ser-cada-vez-mas-fuertes-y-destructivos/">Aristegui Noticias</a> and <a href="https://cnnespanol.cnn.com/2024/02/06/aumento-categoria-6-huracanes-saffir-simpson-trax/">CNN en español</a>&#41;. Given the importance of addressing the global climate crisis, it&#39;s understandable and commendable that mass media echo scientific studies on climate-related risks. However, amidst all the buzz, it&#39;s crucial to take a step back and examine the context in which this proposal is made and what issues it might address.</p>
+<p>The Saffir-Simpson scale is used by meteorological services to communicate the danger posed by a hurricane due to its winds. The higher the wind speed, the higher the category. Categories range from 1 &#40;winds between 119 km/h and 153 m/s&#41; to Category 5 &#40;winds exceeding 251 km/h&#41;. Currently, there is no category higher than 5, as winds near 251 km/h are considered a total risk of destruction to structures and loss of life &#40;a catastrophic situation&#41;. While a valuable tool, the Saffir-Simpson scale is not perfect. One notable weakness is its sole reliance on wind speed, neglecting water-related hazards &#40;e.g., rain and storm surge&#41;, which are the primary causes of deaths and damages caused by hurricanes<sup id="fnref:2"><a href="#fndef:2" class="fnref">[2]</a></sup>. At first glance, adding a new Category 6 doesn&#39;t seem to address this or other weaknesses, but perhaps that&#39;s not the primary goal of the proposal. Let&#39;s delve into what the articles have to say.</p>
+<p>Wehner and Kossin&#39;s article answers the question, &quot;What would we be observing if there were a Category 6 starting at wind speeds of 309 km/h?&quot; The authors use hurricane observation data and climate simulations to conclude, among other things, that: 1. Of all hurricanes with reliable records, those that would fall into Category 6 occurred in the last decade &#40;supported by data, but the record is too short for inferences on time scales relevant to climate&#41;, 2. The number of days with climatic conditions suitable for sustaining Category 6 hurricanes has tripled when comparing the periods 1979-1998 and 1999-2018, and 3. This increase is highly unlikely to have been observed without the global warming caused by greenhouse gas emissions since the industrial revolution.</p>
+<p>The arguments supporting points 2 and 3 appear robust and are theoretically grounded in the potential hurricane intensity model developed by Kerry Emanuel decades ago. This conceptualization is the simplest way we have to understand the maximum intensity a hurricane could reach given a climate. According to it, the maximum intensity hurricanes could attain is determined by the difference between the ocean surface temperature &#40;warm&#41; and the atmosphere&#39;s temperature at about 15 km altitude &#40;cold&#41;. This relationship implies that as ocean temperature increases &#40;e.g., due to global warming&#41;, the maximum possible intensity for a hurricane must increase &#40;if all other factors remain unchanged&#41;.</p>
+<p>In summary, Wehner and Kossin use a hypothetical Category 6 as a tool to clearly show that the distribution of intensities &#40;how many hurricanes are very intense, how many are less intense, and how intense they are&#41; is changing due to climate change. However, they do not firmly propose its inclusion in the Saffir-Simpson scale.</p>
+<p>On the other hand, Mann&#39;s piece picks up these results to strengthen his proposal to introduce Category 6. While Mann acknowledges that this proposal wouldn&#39;t address some weaknesses of the Saffir-Simpson scale, he argues that some objections are outdated in the new climate. For instance, he notes that regulations and construction technology have improved since the scale was created in the 1970s, meaning winds that were once entirely destructive may not be so now. According to this argument, Category 6 would encompass hurricanes that could currently be catastrophic. However, Mann&#39;s main argument seems to be that by adding a category to the Saffir-Simpson scale, a message is sent about the importance of addressing climate change. Specifically, Mann states something along the lines of &quot;From a public policy perspective, it is absolutely critical that the public and policymakers understand the increasing coastal threats caused by hurricanes that are becoming more intense, damaging, and deadly.&quot;</p>
+<p>Both articles draw attention to how the hurricane risk is changing due to anthropogenic climate change. Are there arguments to support this? Certainly, as this and many other articles demonstrate. It is urgent that decision-makers, especially in regulation and public policy, understand this. On the other hand, is the Saffir-Simpson scale the right tool to convey this message? In my opinion, it is not, but it&#39;s a discussion worth having.</p>
+<p>In the end, the discussion about adding a new category is more about risk communication during hazard events. The Saffir-Simpson scale primarily serves to calibrate the response of civil protection agencies during a hurricane&#39;s landfall and to help people make prompt decisions. In this context, is adding a new category necessary? Are there individuals who wouldn&#39;t take decisive actions upon hearing about a Category 5 hurricane but would if there&#39;s a Category 6 threat? Would the existence of a Category 6 diminish the perception of how risky Category 4 or Category 5 hurricanes are? Considering these points, I doubt that Category 6 is necessary. However, those best equipped to answer are social scientists, communicators, civil protection specialists, and those who study people&#39;s behavior in the face of imminent risk.</p>
+<p><table class="fndef" id="fndef:1">
+    <tr>
+        <td class="fndef-backref"><a href="#fnref:1">[1]</a></td>
+        <td class="fndef-content">Formally, we use the term hurricane only for the most intense tropical cyclones. For practicality, I use the term hurricane for all tropical cyclones here.</td>
+    </tr>
+</table>
+ <table class="fndef" id="fndef:2">
+    <tr>
+        <td class="fndef-backref"><a href="#fnref:2">[2]</a></td>
+        <td class="fndef-content">The case of Otis &#40;2023&#41; in Mexico is particular because in this hurricane, almost all damage was due to wind, but this is not the norm.</td>
+    </tr>
+</table>
+ Referencias:</p>
+<p>&#91;1&#93; Wehner, M. F., &amp; Kossin, J. P. &#40;2024&#41;. The growing inadequacy of an open-ended Saffir–Simpson hurricane wind scale in a warming world. Proceedings of the National Academy of Sciences, 121&#40;7&#41;, e2308901121. <a href="https://doi.org/10.1073/pnas.2308901121">https://doi.org/10.1073/pnas.2308901121</a></p>
+<p>&#91;2&#93; Mann, M. E. &#40;2024&#41;. Cat 6 hurricanes have arrived. Proceedings of the National Academy of Sciences, 121&#40;7&#41;, e2322597121. <a href="https://doi.org/10.1073/pnas.2322597121">https://doi.org/10.1073/pnas.2322597121</a></p>
+<p>&#91;3&#93; National Hurricane Center, N. &#40;2021&#41;. The Saffir-Simpson Hurricane Wind Scale. Recuperado el 12 de febrero de 2024, from <a href="https://www.nhc.noaa.gov/pdf/sshws.pdf">https://doi.org/10.1073/pnas.2322597121</a></p>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>
