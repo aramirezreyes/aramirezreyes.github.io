@@ -1,0 +1,37 @@
++++
+pubdate = Date("2024-01-18")
+title = "Is a sixth category for hurricanes necessary?"
+showall = true
+category = "hurricanes"
+tags = ["hurricanes", "risk", "climate"]
++++
+
+Appeared in [Planeteando (spanish)](https://planeteando.org/2024/02/19/es-necesaria-una-categoria-6-para-huracanes/)
+
+Last week, two pieces were published in the National Academy of Sciences of the United States journal, introducing the idea of adding a Category 6 to the Saffir-Simpson hurricane intensity scale[^1]. The titles of the two articles are attention-grabbing and alarming ("The growing inadequacy of an open scale of hurricane winds in a warming world," a peer-reviewed research paper by Wehner and Kossin [1], and "Category 6 hurricanes are already here," an opinion piece by Dr. Michael E. Mann [2]), leading to widespread coverage by various media outlets around the world (e.g., [Aristegui Noticias](https://aristeguinoticias.com/0602/kiosko/huracanes-cientificos-plantean-crear-categoria-6-por-ser-cada-vez-mas-fuertes-y-destructivos/) and [CNN en español](https://cnnespanol.cnn.com/2024/02/06/aumento-categoria-6-huracanes-saffir-simpson-trax/)). Given the importance of addressing the global climate crisis, it's understandable and commendable that mass media echo scientific studies on climate-related risks. However, amidst all the buzz, it's crucial to take a step back and examine the context in which this proposal is made and what issues it might address.
+
+The Saffir-Simpson scale is used by meteorological services to communicate the danger posed by a hurricane due to its winds. The higher the wind speed, the higher the category. Categories range from 1 (winds between 119 km/h and 153 m/s) to Category 5 (winds exceeding 251 km/h). Currently, there is no category higher than 5, as winds near 251 km/h are considered a total risk of destruction to structures and loss of life (a catastrophic situation). While a valuable tool, the Saffir-Simpson scale is not perfect. One notable weakness is its sole reliance on wind speed, neglecting water-related hazards (e.g., rain and storm surge), which are the primary causes of deaths and damages caused by hurricanes[^2]. At first glance, adding a new Category 6 doesn't seem to address this or other weaknesses, but perhaps that's not the primary goal of the proposal. Let's delve into what the articles have to say.
+
+Wehner and Kossin's article answers the question, "What would we be observing if there were a Category 6 starting at wind speeds of 309 km/h?" The authors use hurricane observation data and climate simulations to conclude, among other things, that: 1. Of all hurricanes with reliable records, those that would fall into Category 6 occurred in the last decade (supported by data, but the record is too short for inferences on time scales relevant to climate), 2. The number of days with climatic conditions suitable for sustaining Category 6 hurricanes has tripled when comparing the periods 1979-1998 and 1999-2018, and 3. This increase is highly unlikely to have been observed without the global warming caused by greenhouse gas emissions since the industrial revolution.
+
+The arguments supporting points 2 and 3 appear robust and are theoretically grounded in the potential hurricane intensity model developed by Kerry Emanuel decades ago. This conceptualization is the simplest way we have to understand the maximum intensity a hurricane could reach given a climate. According to it, the maximum intensity hurricanes could attain is determined by the difference between the ocean surface temperature (warm) and the atmosphere's temperature at about 15 km altitude (cold). This relationship implies that as ocean temperature increases (e.g., due to global warming), the maximum possible intensity for a hurricane must increase (if all other factors remain unchanged).
+
+In summary, Wehner and Kossin use a hypothetical Category 6 as a tool to clearly show that the distribution of intensities (how many hurricanes are very intense, how many are less intense, and how intense they are) is changing due to climate change. However, they do not firmly propose its inclusion in the Saffir-Simpson scale.
+
+On the other hand, Mann's piece picks up these results to strengthen his proposal to introduce Category 6. While Mann acknowledges that this proposal wouldn't address some weaknesses of the Saffir-Simpson scale, he argues that some objections are outdated in the new climate. For instance, he notes that regulations and construction technology have improved since the scale was created in the 1970s, meaning winds that were once entirely destructive may not be so now. According to this argument, Category 6 would encompass hurricanes that could currently be catastrophic. However, Mann's main argument seems to be that by adding a category to the Saffir-Simpson scale, a message is sent about the importance of addressing climate change. Specifically, Mann states something along the lines of "From a public policy perspective, it is absolutely critical that the public and policymakers understand the increasing coastal threats caused by hurricanes that are becoming more intense, damaging, and deadly."
+
+Both articles draw attention to how the hurricane risk is changing due to anthropogenic climate change. Are there arguments to support this? Certainly, as this and many other articles demonstrate. It is urgent that decision-makers, especially in regulation and public policy, understand this. On the other hand, is the Saffir-Simpson scale the right tool to convey this message? In my opinion, it is not, but it's a discussion worth having.
+
+In the end, the discussion about adding a new category is more about risk communication during hazard events. The Saffir-Simpson scale primarily serves to calibrate the response of civil protection agencies during a hurricane's landfall and to help people make prompt decisions. In this context, is adding a new category necessary? Are there individuals who wouldn't take decisive actions upon hearing about a Category 5 hurricane but would if there's a Category 6 threat? Would the existence of a Category 6 diminish the perception of how risky Category 4 or Category 5 hurricanes are? Considering these points, I doubt that Category 6 is necessary. However, those best equipped to answer are social scientists, communicators, civil protection specialists, and those who study people's behavior in the face of imminent risk.
+
+[^1]: Formally, we use the term hurricane only for the most intense tropical cyclones. For practicality, I use the term hurricane for all tropical cyclones here.
+
+[^2]: The case of Otis (2023) in Mexico is particular because in this hurricane, almost all damage was due to wind, but this is not the norm.
+
+Referencias:
+
+[1] Wehner, M. F., & Kossin, J. P. (2024). The growing inadequacy of an open-ended Saffir–Simpson hurricane wind scale in a warming world. Proceedings of the National Academy of Sciences, 121(7), e2308901121. [https://doi.org/10.1073/pnas.2308901121](https://doi.org/10.1073/pnas.2308901121)
+
+[2] Mann, M. E. (2024). Cat 6 hurricanes have arrived. Proceedings of the National Academy of Sciences, 121(7), e2322597121. [https://doi.org/10.1073/pnas.2322597121](https://doi.org/10.1073/pnas.2322597121)
+
+[3] National Hurricane Center, N. (2021). The Saffir-Simpson Hurricane Wind Scale. Recuperado el 12 de febrero de 2024, from [https://doi.org/10.1073/pnas.2322597121](https://www.nhc.noaa.gov/pdf/sshws.pdf)
