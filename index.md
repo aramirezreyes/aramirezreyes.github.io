@@ -28,7 +28,6 @@
 
 \begin{biography}{}
 I am interested in tropical cyclones (and other hydro-meteorological phenomena), supercomputing, open science and open software. I am interested in the processes that create tropical cyclones, how they are changing with climate, and how they interact with society to create risk.
- 
 \end{biography}
 
 \shortcv{
