@@ -15,7 +15,6 @@
   job="Tropical cyclone modeler",
   resume="/assets/ARR_resume.pdf",
   email="argel.ramirez@gmail.com",
-  twitter="https://www.threads.net/@hurakandinsky",
   gscholar="https://scholar.google.com/citations?user=JkcQycYAAAAJ&hl=es",
   github="https://github.com/aramirezreyes",
   linkedin="https://www.linkedin.com/in/argelramirezreyes/"
@@ -27,11 +26,11 @@
 @@col-12,col-lg-8
 
 \begin{biography}{}
-I am interested in tropical cyclones (and other hydro-meteorological phenomena), supercomputing, open science and open software. I am interested in the processes that create tropical cyclones, how they are changing with climate, and how they interact with society to create risk.
+I am interested in the processes that create tropical cyclones, how they are changing with climate, and how they interact with society to create risk. Apart from tropical cyclones (and other hydro-meteorological phenomena), I enjoy thinking about supercomputing, open science and open software.
 \end{biography}
 
 \shortcv{
-  interests=["Fluid Dynamics", "Tropical cyclones", "Free software", "Supercomputing", "Climate"],
+  interests=["Risk", "Tropical cyclones", "Fluid dynamics", "Free software", "Supercomputing", "Climate"],
   education=[
     ("PhD in Atmospheric Science, 2023", "University of California, Davis"),
     ("Masters in Scientific Computing, 2017", "Université de Lille 1, Sciences et Technologies"),
@@ -83,9 +82,9 @@ I am interested in tropical cyclones (and other hydro-meteorological phenomena),
 
 \sectionheading{"Favorite tools", class="col-md-12"}
 
-\skill{"Julia", "90%", img="/assets/img/julia-dots-colors.svg"}
-\skill{"Emacs", "50%", img="/assets/img/emacsicon.png"}
-\skill{"Photography", "10%", fa="camera-retro"}
+\skill{"Julia", img="/assets/img/julia-dots-colors.svg"}
+\skill{"Emacs", img="/assets/img/emacsicon.png"}
+\skill{"Photography", fa="camera-retro"}
 
 \end{section}
 
