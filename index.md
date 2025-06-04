@@ -26,7 +26,7 @@
 @@col-12,col-lg-8
 
 \begin{biography}{}
-I am interested in the processes that create tropical cyclones, how they are changing with climate, and how they interact with society to create risk. Apart from tropical cyclones (and other hydro-meteorological phenomena), I enjoy thinking about supercomputing, open science and open software.
+I am a tropical cyclone researcher and an open source enthusiast (in computing and in science). I am interested in the processes that create tropical cyclones, how they are changing with climate, and how they interact with society to create risk. Apart from tropical cyclones (and other hydro-meteorological phenomena), I enjoy thinking about supercomputing, open science and open software.
 \end{biography}
 
 \shortcv{
