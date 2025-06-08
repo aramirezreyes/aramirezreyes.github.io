@@ -9,7 +9,7 @@
 <!-- RIGHT COLUMN -->
 @@col-12,col-lg-4,profile
 
-\img{"/assets/img/perfil_sq.jpeg", class="avatar avatar-square", alt="Argel Ramírez Reyes"}
+\img{"/assets/img/perfil_sq.jpeg", class="avatar avatar-circle", alt="Argel Ramírez Reyes"}
 \portrait{
   name="Argel Ramírez Reyes",
   job="Tropical cyclone modeler",
