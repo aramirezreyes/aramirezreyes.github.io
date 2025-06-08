@@ -117,10 +117,5 @@ body{margin:1;
      color:#212529;
      text-align:left;
      background-color:#fff}
-h1{font-family:'JetBrains Mono', monospace, sans serif;}
-h2{font-family:'JetBrains Mono', monospace, sans serif;}
-h3{font-family:'JetBrains Mono', monospace, sans serif;}
-h4{font-family:'JetBrains Mono', monospace, sans serif;}
-h5{font-family:'JetBrains Mono', monospace, sans serif;}
-h6{font-family:'JetBrains Mono', monospace, sans serif;}
+h1, h2, h3, h4, h5, h6{font-family:'JetBrains Mono', monospace, sans serif;}
 .navbar{font-family:'JetBrains Mono', monospace, sans serif;}
