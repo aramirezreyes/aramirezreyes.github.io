@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Argel Ramírez Reyes">
+  <meta name="description" content="Atmospheric scientist and modeler. Supercomputing enthusiast.">
+
+  <meta name="theme-color" content="#2962ff">
+  <link rel="icon" href="/assets/cloud-wind.ico">
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+
+<!-- highlight + katex + plotly -->
+<link rel=stylesheet href="/libs/highlight/github.min.css">
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+  <link rel="stylesheet" href="/css/academicons.min.css"/>
+  <link rel="stylesheet" href="/css/mytweaks_to_academic.css"/>
+
+   <title>How reproducible is an renv environment, really?</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">Argel Ramírez Reyes</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">Argel Ramírez Reyes</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <!-- <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li> -->
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog ES</span></a></li>
+	<li class=nav-item><a class=nav-link href="/posts_en/"><span>Blog EN</span></a></li>
+        <!-- <\!-- <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li> -\-> -->
+        <!-- <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>How reproducible is an renv environment, really?</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p>Modern programming languages provide environment managers to support reproducibility.</p>
+<p>There is a myriad of things that can affect the reproducibility of the results of a code &#40;e.g., system libraries&#41;, but changes in packages and languages across versions are a big source of variation in behavior. Therefore, a system is needed so that, given a version of the programming environment and an specification of the packages and their versions, code will continue to work as long as the specified environment is present. An environment manager helps keep track of these elements. Furthermore, most modern environment managers help recover that state by installing the specified versions from available sources. This helps sharing code with collaborators and reusing code from ancient projects, for example.</p>
+<p>I recently tried reproducing an environment for the R language. The R version used originally was 4.0.3, released in 2020. The environment manager is <a href="https://rstudio.github.io/renv/">renv</a> and my OS is macOS Tahoe 26.2. &#40;The OS where I first saw the issue is Linux with CentOS 8, but I am reproducing the problem in my Mac&#41;. Old software, but I think this is what an environment manager should be good at. </p>
+<p>Here is a minimal <code>renv.lock</code> that reproduces the issue with only one package. <code>renv.lock</code> <a href="https://rstudio.github.io/renv/articles/renv.html#getting-started">is the file used in renv to specify the versions of packages and of the R language used in a project</a>. The example below is not a very difficult situation because I am not requesting conflicting package versions, just one package &#40;which should bring its own set of dependencies&#41;.</p>
+<pre><code class="language-json">&#123;
+  &quot;R&quot;: &#123;
+    &quot;Version&quot;: &quot;4.0.3&quot;,
+    &quot;Repositories&quot;: &#91;
+      &#123;
+        &quot;Name&quot;: &quot;CRAN&quot;,
+        &quot;URL&quot;: &quot;https://cran.r-project.org&quot;
+      &#125;
+    &#93;
+  &#125;,
+  &quot;Packages&quot;: &#123;
+    &quot;GGally&quot;: &#123;
+      &quot;Package&quot;: &quot;GGally&quot;,
+      &quot;Version&quot;: &quot;2.1.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;
+    &#125;
+  &#125;
+&#125;</code></pre>
+<p>I put this on a working folder. Fired up my R 4.0.3 console, run <code>renv::activate&#40;&#41;</code> to get some infrastructure set up. Then, I try to &quot;restore&quot; the environment by installing the specified versions.</p>
+<pre><code class="language-bash">Rscript -e &quot;options&#40;pkgType &#61; &#39;source&#39;&#41;; renv::restore&#40;&#41;&quot;</code></pre>
+<p>In here, I use the option <code>pkgType &#61; &#39;source&#39;</code> to tell renv to install the packages from source. This is to reproduce the way R installs packages in Linux&#40;*&#41;. The result of that line is a failure to install the package due to a dependency &#40;<code>forcats</code>&#41; not being available. Bad news.</p>
+<pre><code class="language-julia"># Bootstrapping renv 1.1.7 ---------------------------------------------------
+- Downloading renv ... OK
+- Installing renv  ... OK
+
+- None of the packages recorded in the lockfile are currently installed.
+- Use &#96;renv::restore&#40;&#41;&#96; to restore the project library.
+The following package&#40;s&#41; will be updated:
+
+# CRAN -----------------------------------------------------------------------
+- GGally   &#91;* -&gt; 2.1.0&#93;
+
+Error: package &#39;forcats&#39; is not available
+Traceback &#40;most recent calls last&#41;:</code></pre>
+<p>This problem seems to come from the fact that in the main repository for R packages &#40;CRAN&#41; <a href="https://cran.r-project.org/web/packages/policies.html">packages can be removed</a> and <a href="https://cran.r-project.org/src/contrib/Archive/">archived</a> &#40;let&#39;s also link this in here, why not? <a href="https://arilamstein.com/blog/2025/02/12/is-cran-holding-r-back/">Is CRAN holding R back?</a>&#41;. On the other hand, renv environment manager <a href="https://github.com/rstudio/renv/issues/1735">is only equipped to search for package dependencies in the main index of the CRAN repository, and not in the archives</a>. If we take a look at the current index &#40;visited on Jan 31 2026&#41;, we can see that the available version for <code>forcats</code> is not available for R 4.0.3. Game over.</p>
+<pre><code class="language-julia">forcats: Tools for Working with Categorical Variables &#40;Factors&#41;
+
+Helpers for reordering factor levels &#40;including moving specified levels to front, ordering by first appearance, reversing, and randomly shuffling&#41;, and tools for modifying factor levels &#40;including collapsing rare levels into other, &#39;anonymising&#39;, and manually &#39;recoding&#39;&#41;.
+Version: 	1.0.1
+Depends: 	R &#40;≥ 4.1&#41;
+Imports: 	cli &#40;≥ 3.4.0&#41;, glue, lifecycle, magrittr, rlang &#40;≥ 1.0.0&#41;, tibble
+Suggests: 	covr, dplyr, ggplot2, knitr, readr, rmarkdown, testthat &#40;≥ 3.0.0&#41;, withr
+Published: 	2025-09-25
+DOI: 	10.32614/CRAN.package.forcats
+Author: 	Hadley Wickham &#91;aut, cre&#93;, Posit Software, PBC ROR ID &#91;cph, fnd&#93;
+Maintainer: 	Hadley Wickham &lt;hadley at posit.co&gt;
+BugReports: 	https://github.com/tidyverse/forcats/issues
+License: 	MIT &#43; file LICENSE
+URL: 	https://forcats.tidyverse.org/, https://github.com/tidyverse/forcats
+NeedsCompilation: 	no
+Materials: 	README, NEWS
+CRAN checks: 	forcats results</code></pre>
+<p>The difficulty in reproducing my environment is a mixture between the environment manager itself and the way &#40;CRAN&#41; the most used package repository works. In essence, the renv/CRAN combo seem to ensure reproducibility of an environment only in the short term, when you can trust that all the packages will still be available for your R version in the main index of the CRAN repository.</p>
+<p>There are workarounds &#40;setting as the source for packages, a specific historical snapshot of a repository where all your packages were available, or iterating by manually installing packages from source every time <code>renv::restore</code> crashes&#41;, but these increase the complexity considerably to be considered common advice. I spent a few hours trying to restore my environment and I did not succeed. Hours is a scale of time that should be spent doing science, not trying to install your environment.</p>
+<p>My previous experience with <a href="https://jkrumbiegel.com/pages/2022-08-26-pkg-introduction/">Julia&#39;s <code>Pkg.jl</code></a>, <a href="https://blog.devgenius.io/the-most-underrated-feature-of-the-julia-programming-language-the-package-manager-652065f45a3a">which provides a very good experience</a> and the <a href="https://github.com/JuliaRegistries/General?tab&#61;readme-ov-file#how-do-i-remove-a-package-or-version-from-the-registry">julia general registry</a> tell me that things can and should be better.</p>
+<ul>
+<li><p>Interestingly enough,for Mac and Windows the thing seem to be better as historical binaries are available for all the packages as well.</p>
+</li>
+</ul>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+     <script src="/libs/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+ 
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>
