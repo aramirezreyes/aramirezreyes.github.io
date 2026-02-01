@@ -43,7 +43,7 @@ Here is a minimal `renv.lock` that reproduces the issue with only one package. `
 }
 ```
 
-I put this on a working folder. Fired up my R 4.0.3 console, run `renv::activate()` to get some infrastructure set up. Then, I try to "restore" the environment by installing the specified versions.
+I put this on a working folder. Fired up my R 4.0.3 console, ran `renv::activate()` to get some infrastructure set up. Then, I tried to "restore" the environment by installing the specified versions.
 
 
 ```bash
@@ -51,7 +51,7 @@ Rscript -e "options(pkgType = 'source'); renv::restore()"
 ```
 
 
-In here, I use the option `pkgType = 'source'` to tell renv to install the packages from source. This is to reproduce the way R installs packages in Linux(*). The result of that line is a failure to install the package due to a dependency (`forcats`) not being available. Bad news.
+In here, I used the option `pkgType = 'source'` to tell renv to install the packages from source. This is to reproduce the way R installs packages in Linux(*). The result of that line is a failure to install the package due to a dependency (`forcats`) not being available. Bad news.
 
 
 ```
