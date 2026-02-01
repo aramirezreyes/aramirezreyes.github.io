@@ -100,7 +100,7 @@ There are workarounds (setting as the source for packages, a specific historical
 
 My previous experience with [Julia's `Pkg.jl`](https://jkrumbiegel.com/pages/2022-08-26-pkg-introduction/) and the [julia general registry](https://github.com/JuliaRegistries/General?tab=readme-ov-file#how-do-i-remove-a-package-or-version-from-the-registry) tell me that things can and should be better.
 
-On the engineering part, the package registry is a git repository, which enables keeping track of all the versions that have existed. In the policy part, there is the commitment that the [package servers (where the actual code is stored) will keep all previous existing versions of published packages](https://lwn.net/Articles/874250/). This ensure that even "yanked" versions (versions that are not available for fresh installs due to being faulty) are available for environment reproducibilty.
+On the engineering part, julia's package registry is a git repository, which enables keeping track of all the versions that have existed. In the policy part, there is the commitment that the [package servers (where the actual code is stored) will keep all previous existing versions of published packages](https://lwn.net/Articles/874250/). This ensure that even "yanked" versions (versions that are not available for fresh installs due to being faulty) are available for environment reproducibilty. Other languages like Rust also have nice experiences with package managing.
 
 Is this too much to ask?
 
