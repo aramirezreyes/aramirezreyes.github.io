@@ -69,7 +69,7 @@ Traceback (most recent calls last):
 ```
 
 
-This problem seems to come, on the one hand, from the fact that in the main repository for R packages (CRAN) [packages can be removed](https://cran.r-project.org/web/packages/policies.html) and [archived](https://cran.r-project.org/src/contrib/Archive/) (let's also link this in here, why not? [Is CRAN holding R back?](https://arilamstein.com/blog/2025/02/12/is-cran-holding-r-back/)). On the other hand, renv environment manager [is only equipped to search for package dependencies in the main index of the CRAN repository, and not in the archives](https://github.com/rstudio/renv/issues/1735). If we take a look at the current index (visited on Jan 31 2026), we can see that the available version for `forcats` is not available for R 4.0.3. Game over.
+This problem seems to come, on the one hand, from the fact that in the main repository for R packages (CRAN) [packages can be removed](https://cran.r-project.org/web/packages/policies.html) and [archived](https://cran.r-project.org/src/contrib/Archive/) (let's also link this in here, why not? [Is CRAN holding R back?](https://arilamstein.com/blog/2025/02/12/is-cran-holding-r-back/)). On the other hand, renv environment manager [is only equipped to search for package dependencies in the main index of the CRAN repository, and not in the archives](https://github.com/rstudio/renv/issues/1735). If we take a look at the current index (visited on Jan 31 2026), we can see that the newest version for `forcats` is not available for R 4.0.3, this is enough to prevent `renv` from finding a suitable one. Game over.
 
 ```
 forcats: Tools for Working with Categorical Variables (Factors)
