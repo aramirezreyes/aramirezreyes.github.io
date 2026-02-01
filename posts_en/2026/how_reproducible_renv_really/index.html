@@ -120,9 +120,9 @@
     &#125;
   &#125;
 &#125;</code></pre>
-<p>I put this on a working folder. Fired up my R 4.0.3 console, run <code>renv::activate&#40;&#41;</code> to get some infrastructure set up. Then, I try to &quot;restore&quot; the environment by installing the specified versions.</p>
+<p>I put this on a working folder. Fired up my R 4.0.3 console, ran <code>renv::activate&#40;&#41;</code> to get some infrastructure set up. Then, I tried to &quot;restore&quot; the environment by installing the specified versions.</p>
 <pre><code class="language-bash">Rscript -e &quot;options&#40;pkgType &#61; &#39;source&#39;&#41;; renv::restore&#40;&#41;&quot;</code></pre>
-<p>In here, I use the option <code>pkgType &#61; &#39;source&#39;</code> to tell renv to install the packages from source. This is to reproduce the way R installs packages in Linux&#40;*&#41;. The result of that line is a failure to install the package due to a dependency &#40;<code>forcats</code>&#41; not being available. Bad news.</p>
+<p>In here, I used the option <code>pkgType &#61; &#39;source&#39;</code> to tell renv to install the packages from source. This is to reproduce the way R installs packages in Linux&#40;*&#41;. The result of that line is a failure to install the package due to a dependency &#40;<code>forcats</code>&#41; not being available. Bad news.</p>
 <pre><code class="language-julia"># Bootstrapping renv 1.1.7 ---------------------------------------------------
 - Downloading renv ... OK
 - Installing renv  ... OK
