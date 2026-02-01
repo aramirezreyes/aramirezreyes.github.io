@@ -10,7 +10,7 @@ tags = ["programming", "reproducibility"]
 Modern programming languages provide environment managers to support reproducibility.
 
 
-There is a myriad of things that can affect the reproducibility of the results of a code (e.g., system libraries), but changes in packages and languages across versions are a big source of variation in behavior. Therefore, a system is needed so that, given a version of the programming environment and an specification of the packages and their versions, code will continue to work as long as the specified environment is present. An environment manager helps keep track of these elements. Furthermore, most modern environment managers help recover that state by installing the specified versions from available sources. This helps sharing code with collaborators and reusing code from ancient projects, for example.
+There is a myriad of things that can affect the reproducibility of the results of a code (e.g., system libraries), but changes in packages and languages across versions are a big source of variation in behavior. Therefore, a system is needed so that, given a version of the programming environment and an specification of the packages and their versions, code will continue to work as long as the specified environment is present. An environment manager keeps track of these elements. Furthermore, most modern environment managers help recover that state by installing the specified versions from available sources. This helps sharing code with collaborators and reusing code from ancient projects, for example.
 
 
 I recently tried reproducing an environment for the R language. The R version used originally was 4.0.3, released in 2020. The environment manager is [renv](https://rstudio.github.io/renv/) and my OS is macOS Tahoe 26.2. (The OS where I first saw the issue is Linux with CentOS 8, but I am reproducing the problem in my Mac). Old software, but I think this is what an environment manager should be good at. 
@@ -69,7 +69,7 @@ Traceback (most recent calls last):
 ```
 
 
-This problem seems to come from the fact that in the main repository for R packages (CRAN) [packages can be removed](https://cran.r-project.org/web/packages/policies.html) and [archived](https://cran.r-project.org/src/contrib/Archive/) (let's also link this in here, why not? [Is CRAN holding R back?](https://arilamstein.com/blog/2025/02/12/is-cran-holding-r-back/)). On the other hand, renv environment manager [is only equipped to search for package dependencies in the main index of the CRAN repository, and not in the archives](https://github.com/rstudio/renv/issues/1735). If we take a look at the current index (visited on Jan 31 2026), we can see that the available version for `forcats` is not available for R 4.0.3. Game over.
+This problem seems to come, on the one hand, from the fact that in the main repository for R packages (CRAN) [packages can be removed](https://cran.r-project.org/web/packages/policies.html) and [archived](https://cran.r-project.org/src/contrib/Archive/) (let's also link this in here, why not? [Is CRAN holding R back?](https://arilamstein.com/blog/2025/02/12/is-cran-holding-r-back/)). On the other hand, renv environment manager [is only equipped to search for package dependencies in the main index of the CRAN repository, and not in the archives](https://github.com/rstudio/renv/issues/1735). If we take a look at the current index (visited on Jan 31 2026), we can see that the available version for `forcats` is not available for R 4.0.3. Game over.
 
 ```
 forcats: Tools for Working with Categorical Variables (Factors)
@@ -98,7 +98,10 @@ The difficulty in reproducing my environment is a mixture between the environmen
 There are workarounds (setting as the source for packages, a specific historical snapshot of a repository where all your packages were available, or iterating by manually installing packages from source every time `renv::restore` crashes), but these increase the complexity considerably to be considered common advice. I spent a few hours trying to restore my environment and I did not succeed. Hours is a scale of time that should be spent doing science, not trying to install your environment.
 
 
-My previous experience with [Julia's `Pkg.jl`](https://jkrumbiegel.com/pages/2022-08-26-pkg-introduction/), [which provides a very good experience](https://blog.devgenius.io/the-most-underrated-feature-of-the-julia-programming-language-the-package-manager-652065f45a3a) and the [julia general registry](https://github.com/JuliaRegistries/General?tab=readme-ov-file#how-do-i-remove-a-package-or-version-from-the-registry) tell me that things can and should be better.
+My previous experience with [Julia's `Pkg.jl`](https://jkrumbiegel.com/pages/2022-08-26-pkg-introduction/) and the [julia general registry](https://github.com/JuliaRegistries/General?tab=readme-ov-file#how-do-i-remove-a-package-or-version-from-the-registry) tell me that things can and should be better.
 
+On the engineering part, the package registry is a git repository, which enables keeping track of all the versions that have existed. In the policy part, there is the commitment that the [package servers (where the actual code is stored) will keep all previous existing versions of published packages](https://lwn.net/Articles/874250/). This ensure that even "yanked" versions (versions that are not available for fresh installs due to being faulty) are available for environment reproducibilty.
+
+Is this too much to ask?
 
 * Interestingly enough,for Mac and Windows the thing seem to be better as historical binaries are available for all the packages as well.
