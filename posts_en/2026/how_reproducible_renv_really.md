@@ -10,7 +10,9 @@ tags = ["programming", "reproducibility"]
 Modern programming languages provide environment managers to support reproducibility.
 
 
-There is a myriad of things that can affect the reproducibility of the results of a code (e.g., system libraries), but changes in packages and languages across versions are a big source of variation in behavior. Therefore, a system is needed so that, given a version of the programming environment and an specification of the packages and their versions, code will continue to work as long as the specified environment is present. An environment manager keeps track of these elements. Furthermore, most modern environment managers help recover that state by installing the specified versions from available sources. This helps sharing code with collaborators and reusing code from ancient projects, for example.
+There is a myriad of things that can affect the reproducibility of the results of a code (e.g., system libraries), but changes in packages and languages across versions are a big source of variation in behavior. 
+
+Therefore, a system is needed so that, given a version of the programming environment and an specification of the packages and their versions, code will continue to work as long as the specified environment is present. An environment manager keeps track of these elements. Furthermore, most modern environment managers help recover that state by installing the specified versions from available sources. This helps sharing code with collaborators and reusing code from ancient projects, for example.
 
 
 I recently tried reproducing an environment for the R language. The R version used originally was 4.0.3, released in 2020. The environment manager is [renv](https://rstudio.github.io/renv/) and my OS is macOS Tahoe 26.2. (The OS where I first saw the issue is Linux with CentOS 8, but I am reproducing the problem in my Mac). Old software, but I think this is what an environment manager should be good at. 
