@@ -14,7 +14,7 @@
   name="Argel Ramírez Reyes",
   job="Tropical cyclone modeler",
   resume="/assets/ARR_resume.pdf",
-  email="argel.ramirez@gmail.com",
+  email="name dot first lastname at gmail dot com",
   gscholar="https://scholar.google.com/citations?user=JkcQycYAAAAJ&hl=es",
   github="https://github.com/aramirezreyes",
   linkedin="https://www.linkedin.com/in/argelramirezreyes/"
@@ -26,7 +26,7 @@
 @@col-12,col-lg-8
 
 \begin{biography}{}
-I am a tropical cyclone researcher and an open source enthusiast (in computing and in science). I am interested in the processes that create tropical cyclones, how they are changing with climate, and how they interact with society to create risk. Apart from tropical cyclones and other hydro-meteorological phenomena, I enjoy thinking about supercomputing, open science and open software. 
+I am a tropical cyclone researcher an open source software enthusiast and an open science enthusiast. I am interested in the processes that create tropical cyclones, how they are changing with climate, and how they interact with society to create risk. Apart from tropical cyclones and other hydro-meteorological phenomena, I enjoy thinking about supercomputing, open science and open software. 
 
 I also take photographs from time to time.
 \end{biography}
