@@ -26,21 +26,11 @@
 @@col-12,col-lg-8
 
 \begin{biography}{}
-I am a tropical cyclone researcher and an open source enthusiast (in computing and in science). I am interested in the processes that create tropical cyclones, how they are changing with climate, and how they interact with society to create risk. Apart from tropical cyclones (and other hydro-meteorological phenomena), I enjoy thinking about supercomputing, open science and open software. I also take photographs from time to time.
+I am a tropical cyclone researcher and an open source enthusiast (in computing and in science). I am interested in the processes that create tropical cyclones, how they are changing with climate, and how they interact with society to create risk. Apart from tropical cyclones and other hydro-meteorological phenomena, I enjoy thinking about supercomputing, open science and open software. 
+
+I also take photographs from time to time.
 \end{biography}
-
-\shortcv{
-  interests=["Risk", "Tropical cyclones", "Fluid dynamics", "Free software", "Supercomputing", "Climate"],
-  education=[
-    ("PhD in Atmospheric Science, 2023", "University of California, Davis"),
-    ("Masters in Scientific Computing, 2017", "Université de Lille 1, Sciences et Technologies"),
-    ("BSc in Physics, 2016", "Universidad Nacional Autónoma de México")]
-}
-
 @@ <!-- end of column -->
-
-
-
 \end{section}
 
 \begin{section}{name="recent news"}
