@@ -35,17 +35,17 @@ I also take photographs from time to time.
 
 \begin{section}{name="recent news"}
 
-<!-- --------------
-     SHORT PUB LIST SECTION
-     -------------- -->
+<!-- <\!-- -------------- -->
+<!--      SHORT PUB LIST SECTION -->
+<!--      -------------- -\-> -->
 
 
-@@col-12,col-lg-6,pubs
- \
-\sectionheading{"Recent publications", class="col-md-12"}
-{{pub}}
+<!-- @@col-12,col-lg-6,pubs -->
+<!--  \ -->
+<!-- \sectionheading{"Recent publications", class="col-md-12"} -->
+<!-- {{pub}} -->
 
-@@
+<!-- @@ -->
 
 
 <!-- --------------
@@ -53,12 +53,11 @@ I also take photographs from time to time.
      -------------- -->
 
 
-@@col-12,col-lg-6,news
+@@col-12,col-lg-12,news
 
  \
 \sectionheading{"News", class="col-md-12"}
 {{recentnews 3}}
-
 @@
 \end{section}
 
@@ -68,14 +67,14 @@ I also take photographs from time to time.
      SKILLS SECTION
      -------------- -->
 
-\begin{section}{name="skills", class="wg-featurette", rowclass="featurette"}
+<!-- \begin{section}{name="skills", class="wg-featurette", rowclass="featurette"} -->
 
-\sectionheading{"Favorite tools", class="col-md-12"}
+<!-- \sectionheading{"Favorite tools", class="col-md-12"} -->
 
-\skill{"Julia", img="/assets/img/julia-dots-colors.svg"}
-\skill{"Emacs", img="/assets/img/emacsicon.png"}
-\skill{"Photography", fa="camera-retro"}
+<!-- \skill{"Julia", img="/assets/img/julia-dots-colors.svg"} -->
+<!-- \skill{"Emacs", img="/assets/img/emacsicon.png"} -->
+<!-- \skill{"Photography", fa="camera-retro"} -->
 
-\end{section}
+<!-- \end{section} -->
 
 
