@@ -115,6 +115,16 @@ body{margin:1;
 h1, h2, h3, h4, h5, h6{font-family:'JetBrains Mono', monospace, sans serif;}
 .navbar{font-family:'JetBrains Mono', monospace, sans serif;}
 
+p {
+    margin-bottom:0.2rem;
+    margin-top:0.0rem;
+}
+
+.col-lg-8 {
+    display:grid;
+    align-items:center;
+}
+
 .media.stream-item {
     margin-bottom:0
 }
