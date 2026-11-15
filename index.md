@@ -27,7 +27,6 @@
 
 \begin{biography}{}
 I am a tropical cyclone researcher an open source software enthusiast and an open science enthusiast. I am interested in the processes that create tropical cyclones, how they are changing with climate, and how they interact with society to create risk. Apart from tropical cyclones and other hydro-meteorological phenomena, I enjoy thinking about supercomputing, open science and open software. 
-
 I also take photographs from time to time.
 \end{biography}
 @@ <!-- end of column -->
